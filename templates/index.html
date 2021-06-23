@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>example</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <h2>My name is {{name}} and i'm from {{city}}</h2><br>
+    <h2>This is your text analyser. Enter your text below</h2>
+
+    <form action="/analyze" method="post"> {% csrf_token %} <!--we take csrf code from the browser, we take this when we use post method without this our page doesn't show-->
+        <textarea name="textarea" style="margin: 0px; width: 1159px; height: 164px;"></textarea><br>
+        <input type="checkbox" name="removepunc"> Remove Punctuation <br>
+        <input type="checkbox" name="caps"> Upper case <br>
+        <input type="checkbox" name="lower"> Lower case <br>
+        <input type="checkbox" name="linemerge"> Merge line <br>
+        <input type="checkbox" name="remove_space"> Remove Space <br>
+        <button type="submit">Analyze</button>
+        
+    </form>
+</body>
+
+</html>

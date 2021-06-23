@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Analyzing your text</title>
+    </head>
+    <body>
+        <h1>Your analyzed text - {{purpose}}</h1>
+        <p>
+            <pre> {{analyzed_text}} </pre>
+        </p>
+        <form>
+        <button onclick="goBack()">Go Back</button>
+        <script>
+        function goBack() {
+            window.history.back();
+        }
+        </script>
+        </form>
+    </body>
+</html>
